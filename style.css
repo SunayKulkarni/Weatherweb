@@ -1,0 +1,88 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #926934; /* Background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box;
+}
+
+
+/* Style for the header */
+.head {
+    width: 60%; /* Ensure it spans the full width */
+    text-align: center;
+    background-color: #007bff; /* Light blue background */
+    color: white; /* White text color */
+    padding: 20px 0; /* Padding for spacing */
+    font-size: 20px; /* Font size for a prominent heading */
+    font-weight: bold; /* Make it bold */
+    border-bottom: 5px solid #0056b3; /* Add a border for emphasis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Card styling */
+.card {
+    background: #162d53;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    margin-top: 20px; /* Add spacing between the header and card */
+}
+
+/* Search section */
+.search {
+    margin-bottom: 20px;
+}
+
+.search input {
+    width: 70%;
+    padding: 10px;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Weather section */
+.weather-icon {
+    width: 100px;
+    margin: 10px 0;
+}
+
+.temp {
+    font-size: 2em;
+    margin: 0;
+}
+
+.city {
+    font-size: 1.5em;
+    margin: 5px 0;
+}
+
+.details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.col {
+    text-align: center;
+}
+
+.humidity-icon, .wind-icon {
+    width: 30px;
+    margin-bottom: 5px;
+}
