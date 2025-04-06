@@ -41,3 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 });
+
+locationInput.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    searchButton.click();
+  }
+});
+
