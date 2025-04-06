@@ -1,40 +1,47 @@
 /* General body styling */
 body {
-    font-family: Arial, sans-serif;
-    background: #926934; /* Background color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Stack elements vertically */
-    height: 100vh; /* Full viewport height */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    color: #fff;
 }
 
-
-/* Style for the header */
+/* Header styling */
 .head {
-    width: 60%; /* Ensure it spans the full width */
+    width: 100%;
     text-align: center;
-    background-color: #007bff; /* Light blue background */
-    color: white; /* White text color */
-    padding: 20px 0; /* Padding for spacing */
-    font-size: 20px; /* Font size for a prominent heading */
-    font-weight: bold; /* Make it bold */
-    border-bottom: 5px solid #0056b3; /* Add a border for emphasis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    background: rgba(0, 123, 255, 0.2);
+    color: #ffffff;
+    padding: 25px 0;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 }
 
-/* Card styling */
+/* Weather card styling */
 .card {
-    background: #162d53;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 25px 30px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    width: 320px;
     text-align: center;
-    margin-top: 20px; /* Add spacing between the header and card */
+    margin-top: 30px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
 }
 
 /* Search section */
@@ -44,45 +51,73 @@ body {
 
 .search input {
     width: 70%;
-    padding: 10px;
-    margin-right: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    backdrop-filter: blur(5px);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search input:focus {
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .search button {
-    background: none;
+    background: #00c9ff;
+    background: linear-gradient(to right, #92fe9d, #00c9ff);
     border: none;
+    padding: 10px 12px;
+    border-radius: 50%;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-/* Weather section */
+.search button:hover {
+    background: linear-gradient(to right, #00c9ff, #92fe9d);
+}
+
+/* Weather data */
 .weather-icon {
     width: 100px;
-    margin: 10px 0;
+    margin: 20px 0;
+    filter: drop-shadow(0 0 5px #ffffff70);
 }
 
 .temp {
-    font-size: 2em;
-    margin: 0;
+    font-size: 2.5em;
+    margin: 10px 0;
+    font-weight: bold;
 }
 
 .city {
     font-size: 1.5em;
-    margin: 5px 0;
+    margin-bottom: 15px;
+    font-weight: 500;
 }
 
 .details {
     display: flex;
     justify-content: space-around;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .col {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
 }
 
 .humidity-icon, .wind-icon {
-    width: 30px;
-    margin-bottom: 5px;
+    width: 35px;
+    margin-bottom: 8px;
+    filter: brightness(0) invert(1);
 }
